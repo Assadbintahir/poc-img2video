@@ -1,0 +1,17 @@
+{
+  "name": "poc-img2video",
+  "version": "1.0.0",
+  "description": "this is a proof of concept for making a video with the help of images and a background audio",
+  "main": "index.js",
+  "scripts": {
+    "videoshow": "node videoshow.js",
+    "fluent:ffmpeg": "node fluent-ffmpeg"
+  },
+  "author": "asad ullah",
+  "license": "ISC",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "sharp": "^0.25.2",
+    "videoshow": "^0.1.12"
+  }
+}
