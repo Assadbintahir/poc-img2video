@@ -1,7 +1,6 @@
 // not working example. unable to add audio to image clip
 
 const ffmpeg = require('fluent-ffmpeg');
-const path = require('path')
 
 const images = [
     __dirname + '/fixtures/images/1.jpg',
@@ -10,17 +9,19 @@ const images = [
     __dirname + '/fixtures/images/4.jpg',
     __dirname + '/fixtures/images/5.png'
 ]
-const audio = __dirname + '/fixtures/audio/song.mp3';
+
+var chainedInputs = images.reduce((result, inputItem) => result.input(inputItem), ffmpeg());
 
 
-const proc = ffmpeg()
-    .addInput(images[0])
-    .addInput(audio)
-    //.input(fourthFile)
-    //.input(...)
-    // .loop(20)
-    // using 25 fps
-    // .fps(25)
+// chainedInputs
+ffmpeg()
+    .input()
+    .loop(5)
+    .fps(24)
+    // .videoBitrate(2048)
+    // .videoCodec('libx264')
+    // .format('mp4')
+
     // setup event handlers
     .on('end', function () {
         console.log('files have been merged succesfully');
