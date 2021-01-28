@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "fluent-ffmpeg": "^2.1.2",
-    "sharp": "^0.26.0",
+    "sharp": "^0.27.1",
     "videoshow": "^0.1.12"
   }
 }
